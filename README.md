@@ -1,6 +1,4 @@
-			 VIEUX QUEST 3
-			 (fr. Vie Quest 3)
-	 THE VIDEO GAME THAT WILL CERTAINLY
-	 HAVE A CHANCE TO MAYBE NOT KEEP YOU SOBER
+			 VIEUX QUEST 3:
+			the video game
 			 2017 (R) (C)
 
