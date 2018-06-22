@@ -7,10 +7,10 @@
 ///////////////////////
 
 class Object {
-	private:
-		SDL_Texture * face;
-		long long volume, weight;
 	public:
-		Object (SDL_Texture * newFace);
-		SDL_Texture * getFace();
+	Object (SDL_Texture * newFace);
+	SDL_Texture * getFace();
+
+	private:
+	SDL_Texture * face;
 };

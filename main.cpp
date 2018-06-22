@@ -9,6 +9,7 @@
 #include <SDL_image.h>
 #include <string>
 #include <cstdio>
+
 #include "init.h"
 
 int main (int argc, char* args[]) {

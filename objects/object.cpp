@@ -1,9 +1,9 @@
-#include "object.h"
+#include "../objects/object.h"
 
 Object::Object (SDL_Texture * newFace) {
-   face = newFace;
+   this->face = newFace;
 }
 
 SDL_Texture * Object::getFace() {
-	return face;
+	return this->face;
 }
