@@ -1,7 +1,6 @@
-#ifndef DCP_OBJECT_HG
-#define DCP_OBJECT_HG
+#pragma once
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 /////////////////////////
 // TODO: finish class //
@@ -15,5 +14,3 @@ class Object {
 		Object (SDL_Texture * newFace);
 		SDL_Texture * getFace();
 };
-
-#endif

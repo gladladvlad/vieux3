@@ -1,12 +1,12 @@
 /*
-				VIEUX QUEST 3
-				(fr. Vie Quest 3)
-	THE VIDEO GAME THAT WILL CERTAINLY
-		HAVE A CHANCE TO MAYBE NOT KEEP YOU SOBER
+				VIEUX QUEST 3:
+				the video game
 				2017 (R) (C)
 */
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#define SDL_MAIN_HANDLED
+
+#include <SDL.h>
+#include <SDL_image.h>
 #include <string>
 #include <cstdio>
 #include "init.h"
