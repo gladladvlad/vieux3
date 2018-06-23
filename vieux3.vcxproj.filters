@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="sources\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="headers\util">
+      <UniqueIdentifier>{c914c17e-e461-417c-b9df-184ee853c29e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\graphics">
+      <UniqueIdentifier>{4cbe7a91-2b42-488c-87b6-ec1d7c4a6590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\objects">
+      <UniqueIdentifier>{34b250ae-423e-41ab-94a7-53e9c3775b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\physics">
+      <UniqueIdentifier>{5f625dc1-1ef7-4c43-a4aa-1e98d3a4c50b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\map">
+      <UniqueIdentifier>{1f99b73c-dd58-4dac-8f01-ce3b114ea303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\graphics">
+      <UniqueIdentifier>{599a31fe-8152-47ef-8ce9-1622c85170d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\map">
+      <UniqueIdentifier>{659381b7-7e13-4b0b-a153-998aad1784b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\physics">
+      <UniqueIdentifier>{14bb42b3-cdfc-425f-9f09-0a819a24fb5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\objects">
+      <UniqueIdentifier>{5ff9d622-7a99-4fcd-ba28-4565b64a5f17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\util">
+      <UniqueIdentifier>{7ea1a50e-15d5-43cc-a7e2-9cbad94109e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\actor.cpp">
+      <Filter>sources\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="map\map.cpp">
+      <Filter>sources\map</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\object.cpp">
+      <Filter>sources\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objects\player.cpp">
+      <Filter>sources\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\point.cpp">
+      <Filter>sources\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\vector.cpp">
+      <Filter>sources\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="util\retcode.cpp">
+      <Filter>sources\util</Filter>
+    </ClCompile>
+    <ClCompile Include="map\tile.cpp">
+      <Filter>sources\map</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\renderer.cpp">
+      <Filter>sources\graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util\retcode.h">
+      <Filter>headers\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\ints.h">
+      <Filter>headers\util</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\actor.h">
+      <Filter>headers\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\geometry.h">
+      <Filter>headers\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="map\map.h">
+      <Filter>headers\map</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\object.h">
+      <Filter>headers\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\renderer.h">
+      <Filter>headers\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="objects\player.h">
+      <Filter>headers\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="map\tile.h">
+      <Filter>headers\map</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

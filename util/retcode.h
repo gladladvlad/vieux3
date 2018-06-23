@@ -4,14 +4,14 @@
 
 #include "../util/ints.h"
 
-class RetCode {
-	public:
-	uint16_t getStatus ();
-	std::string getMessage ();
+namespace vx {
 
-	RetCode (uint16_t newStatus, std::string newMessage);
 
-	private:
-	uint16_t status;
-	std::string message;
+enum RetCode : uint16_t {
+	Success, Failure
 };
+
+const char RetMsg[][64] = {"Success", "Failure"};
+
+
+}

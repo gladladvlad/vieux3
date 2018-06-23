@@ -2,16 +2,25 @@
 
 #include <SDL.h>
 
-#include "../util/retcode.h"
-
+#include "../physics/geometry.h"
 #include "../objects/object.h"
+
+#include "../util/retcode.h"
 
 ////////////////////////
 ///// unfinished //////
 //////////////////////
 
+namespace vx {
+
+
 class Actor : public Object {
 	public:
-	SDL_Texture * face;
-	RetCode & act ();
+	RetCode act ();
+	RetCode move (Vector & displacement);
+
+	Actor ();
 };
+
+
+}

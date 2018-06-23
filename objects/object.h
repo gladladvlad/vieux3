@@ -2,15 +2,32 @@
 
 #include <SDL.h>
 
+#include "../physics/geometry.h"
+
+#include "../util/retcode.h"
+
 /////////////////////////
 // TODO: finish class //
 ///////////////////////
 
+namespace vx {
+
+
 class Object {
 	public:
-	Object (SDL_Texture * newFace);
-	SDL_Texture * getFace();
+	Object ();
+	Object (Point & where);
+	~Object ();
 
-	private:
+	SDL_Texture * getFace ();
+	RetCode setFace (SDL_Texture * newFace);
+
+	Point * getPosition ();
+
+	protected:
 	SDL_Texture * face;
+	Point * position;
 };
+
+
+}

@@ -10,7 +10,10 @@
 #include <string>
 #include <cstdio>
 
-#include "init.h"
+//#include "init.h"
+#include "graphics/renderer.h"
+
+#include "util/retcode.h"
 
 int main (int argc, char* args[]) {
 	std::string varg = "";
@@ -47,13 +50,20 @@ int main (int argc, char* args[]) {
 
 	bool running = true;
 
+	/*
 	SDL_Window * window = nullptr;
 	SDL_Renderer * renderer = nullptr;
-	SDL_Event event;
-	
-	init(window, renderer, width, height);
+	*/
 
-	SDL_Texture * img = load_image("./res/img/img1.bmp", renderer);
+	SDL_Event event;
+
+	vx::Renderer * screenRenderer = new vx::Renderer();
+	screenRenderer->init(width, height);
+
+	
+	//init(window, renderer, width, height);
+
+	SDL_Texture * img = screenRenderer->loadImage("./res/img/img1.bmp");
 
 	unsigned long long startTick;
 
@@ -73,12 +83,19 @@ int main (int argc, char* args[]) {
 			}
 		}
 
+		/*
 		// Clear screen
 		SDL_RenderClear(renderer);
 		// Render texture
 		SDL_RenderCopy(renderer, img, NULL, NULL);
 		// Update window
 		SDL_RenderPresent(renderer);
+		*/
+
+		screenRenderer->clear();
+		screenRenderer->copy(img);
+		screenRenderer->present();
+
 
 		// Cap the fps
 		if ((1000 / fps) > SDL_GetTicks() - startTick) {
@@ -87,8 +104,7 @@ int main (int argc, char* args[]) {
 	}
 	
 	SDL_DestroyTexture(img);
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
+	screenRenderer->~Renderer();
 	SDL_Quit();
 	return 0;
 }
