@@ -14,8 +14,13 @@ Renderer::~Renderer () {
 }
 
 
-RetCode Renderer::renderObject (Object & obj) {
-	this->copy(obj.getFace());
+RetCode Renderer::renderObject (Object * obj) {
+	//////////////////// TODO : incomplet
+	Point * objPos = obj->getPosition();
+	const SDL_Rect dstRect = {(int)(objPos->getX()), (int)(objPos->getY()),
+								(int)(objPos->getX() + 64.0L), (int)(objPos->getY() + 64.0L)};
+	this->copy(obj->getFace(), NULL, &dstRect);
+	////////////////////////
 
 	return RetCode::Success;
 }
@@ -27,9 +32,9 @@ RetCode Renderer::clear () {
 	return RetCode::Success;
 }
 
-RetCode Renderer::copy (SDL_Texture * image) {
+RetCode Renderer::copy (SDL_Texture * image, const SDL_Rect * srcRect, const SDL_Rect * dstRect) {
 	// Render texture
-	SDL_RenderCopy(this->renderer, image, NULL, NULL);
+	SDL_RenderCopy(this->renderer, image, srcRect, dstRect);
 
 	return RetCode::Success;
 }

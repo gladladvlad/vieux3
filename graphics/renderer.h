@@ -19,9 +19,9 @@ class Renderer {
 	RetCode init (int32_t width, int32_t height);
 	SDL_Texture * loadImage (const char * path);
 
-	RetCode renderObject (Object & obj);
+	RetCode renderObject (Object * obj);
 	RetCode clear ();
-	RetCode copy (SDL_Texture * image);
+	RetCode copy (SDL_Texture * image, const SDL_Rect * srcRect, const SDL_Rect * dstRect);
 	RetCode present ();
 
 	//private:

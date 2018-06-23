@@ -12,6 +12,7 @@
 
 //#include "init.h"
 #include "graphics/renderer.h"
+#include "objects/player.h"
 
 #include "util/retcode.h"
 
@@ -50,20 +51,16 @@ int main (int argc, char* args[]) {
 
 	bool running = true;
 
-	/*
-	SDL_Window * window = nullptr;
-	SDL_Renderer * renderer = nullptr;
-	*/
 
 	SDL_Event event;
 
 	vx::Renderer * screenRenderer = new vx::Renderer();
 	screenRenderer->init(width, height);
 
-	
-	//init(window, renderer, width, height);
-
 	SDL_Texture * img = screenRenderer->loadImage("./res/img/img1.bmp");
+	vx::Player * player = new vx::Player();
+	player->setEvent(&event);
+	player->setFace(screenRenderer->loadImage("./res/img/img2.bmp"));
 
 	unsigned long long startTick;
 
@@ -81,6 +78,8 @@ int main (int argc, char* args[]) {
 					break;
 				}
 			}
+
+			player->act();
 		}
 
 		/*
@@ -93,7 +92,8 @@ int main (int argc, char* args[]) {
 		*/
 
 		screenRenderer->clear();
-		screenRenderer->copy(img);
+		screenRenderer->copy(img, NULL, NULL);
+		screenRenderer->renderObject(player);
 		screenRenderer->present();
 
 
